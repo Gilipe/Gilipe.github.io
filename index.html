@@ -26,16 +26,16 @@
 				<img src="library/build/assets/logo.png" alt="Filipe Figueiredo">
 			</a>
 			<h1>Filipe Figueiredo</h1>
-			<h2>Front-End, Back-End, Other Things <em>&amp;</em> In Betweens</h2>
+			<h2>Front-End, Back-End, In Betweens <strong><em>&amp;</em></strong> Other Things</h2>
 		</div>
 	</main>
 	<footer class="footer">
 		<ul class="social">
-			<li><a v-link="{ path: '/home' }" class="home">Home</a></li>
-			<li><a v-link="{ path: '/about' }" class="about">About</a></li>
-			<li><a href="" class="codepen" target="_blank">Codepen</a></li>
-			<li><a href="" class="github" target="_blank">Github</a></li>
-			<li><a href="" class="spotify" target="_blank"><i class="fa fa-music" aria-hidden="true"></i></a></li>
+			<!-- <li><a v-link="{ path: '/home' }" class="home">Home</a></li>
+			<li><a v-link="{ path: '/about' }" class="about">About</a></li> -->
+			<li><a href="http://codepen.io/Gilipe/" class="codepen" target="_blank">Codepen</a></li>
+			<li><a href="https://github.com/Gilipe" class="github" target="_blank">Github</a></li>
+			<li><a href="https://open.spotify.com/user/iamgilipe" class="spotify" target="_blank"><i class="fa fa-music" aria-hidden="true"></i></a></li>
 		</ul>
 	</footer>
 </div>
@@ -55,41 +55,10 @@
 	</div>
 </template>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.13/vue-router.js"></script>
 <script src="library/build/js/vendor/particles.min.js"></script>
 <script src="library/build/js/vendor/particles.js"></script>
-<script>
-
-Vue.use(VueRouter);
-
-var HomeComponent = Vue.extend({
-	template: "#home",
-	data: function() {
-		return { class: "home" }
-	}
-});
-var AboutComponent = Vue.extend({
-	template: "#about",
-	data: function() {
-		return { class: "about" }
-	}
-});
-
-var router = new VueRouter();
-
-router.map({
-	'/home': {
-		component: HomeComponent
-	},
-	'/about': {
-		component: AboutComponent
-	}
-});
-
-var App = Vue.extend({});
-router.start(App, "#app");
-
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.13/vue-router.js"></script>
+<script src="library/build/js/app.js"></script>
 </body>
 </html>
