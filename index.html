@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Filipe Figueiredo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="library/build/css/vendor/normalize.min.css">
+	<link rel="stylesheet" href="library/build/css/main.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<script src="library/build/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="app">
+	<div id="particles"></div>
+	<router-view transition="fade" transition-mode="out-in"></router-view>
+	<main class="main">
+		<div class="wrap">
+			<a href="" class="logo">
+				<img src="library/build/assets/logo.png" alt="Filipe Figueiredo">
+			</a>
+			<h1>Filipe Figueiredo</h1>
+			<h2>Front-End, Back-End, <em>&amp;</em> In Betweens</h2>
+		</div>
+	</main>
+	<footer class="footer">
+		<ul class="social">
+			<li><a v-link="{ path: '/home' }" class="home">Home</a></li>
+			<li><a v-link="{ path: '/about' }" class="about">About</a></li>
+			<li><a href="" class="codepen" target="_blank">Codepen</a></li>
+			<li><a href="" class="github" target="_blank">Github</a></li>
+			<li><a href="" class="spotify" target="_blank"><i class="fa fa-music" aria-hidden="true"></i></a></li>
+		</ul>
+	</footer>
+</div>
+
+<template id="home">
+	<div class="home">
+		<h1>Home</h1>
+		<div class="content">
+		</div>
+	</div>
+</template>
+<template id="about">
+	<div class="about">
+		<h1>About</h1>
+		<div class="content">
+		</div>
+	</div>
+</template>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.13/vue-router.js"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="library/build/js/vendor/particles.js"></script>
+<script>
+
+Vue.use(VueRouter);
+
+var HomeComponent = Vue.extend({
+	template: "#home",
+	data: function() {
+		return { class: "home" }
+	}
+});
+var AboutComponent = Vue.extend({
+	template: "#about",
+	data: function() {
+		return { class: "about" }
+	}
+});
+
+var router = new VueRouter();
+
+router.map({
+	'/home': {
+		component: HomeComponent
+	},
+	'/about': {
+		component: AboutComponent
+	}
+});
+
+var App = Vue.extend({});
+router.start(App, "#app");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; }
+
+a {
+  cursor: pointer; }
+
+canvas {
+  display: block;
+  vertical-align: bottom; }
+
+ol, ul {
+  list-style-type: none;
+  margin: 0 0 15px; }
+
+.wrap {
+  position: relative;
+  z-index: 5;
+  text-align: center; }
+
+.main {
+  transition: all 500ms ease; }
+
+#particles {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.logo {
+  display: block;
+  margin: 0 auto 30px;
+  position: relative;
+  width: 150px;
+  height: 150px; }
+
+h1 {
+  color: #333;
+  letter-spacing: 9px;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 15px; }
+
+h2 {
+  color: #999;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  margin: 0; }
+
+.social {
+  font-size: 14px;
+  position: absolute;
+  right: 15px;
+  bottom: 0; }
+.social li {
+  float: left;
+  line-height: 1;
+  margin-left: 15px; }
+.social li:first-child {
+  margin-left: 0; }
+.social a {
+  color: #999;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: color 250ms ease; }
+.social a:hover {
+  color: #333; }
+
+.view {
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 250px;
+  height: 100%; }
+
+.fade-transition {
+  background: tomato;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  transition: all 500ms ease; }
+.fade-transition ~ .main {
+  transform: translate(125px, 0); }
+.fade-transition.fade-enter, .fade-transition.fade-leave {
+  transform: translate(-250px, 0); }
+.fade-transition.fade-enter ~ .main, .fade-transition.fade-leave ~ .main {
+  transform: translate(0, 0); }
+
+/*# sourceMappingURL=main.css.map */
