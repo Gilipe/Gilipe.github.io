@@ -3,10 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Filipe Figueiredo</title>
+	<title>In Betweens & Other Things</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#222">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#222">
+
 	<link rel="stylesheet" href="library/build/css/vendor/normalize.min.css">
 	<link rel="stylesheet" href="library/build/css/main.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -22,7 +38,7 @@
 	<router-view transition="fade" transition-mode="out-in"></router-view>
 	<main class="main">
 		<div class="wrap">
-			<a href="" class="logo">
+			<a v-link="{ path: '/' }" class="logo">
 				<img src="library/build/assets/logo.png" alt="Filipe Figueiredo">
 			</a>
 			<h1>Filipe Figueiredo</h1>
@@ -31,8 +47,8 @@
 	</main>
 	<footer class="footer">
 		<ul class="social">
-			<!-- <li><a v-link="{ path: '/home' }" class="home">Home</a></li>
-			<li><a v-link="{ path: '/about' }" class="about">About</a></li> -->
+			<!-- <li><a v-link="{ path: '/about' }" class="about">About</a></li>
+			<li><a v-link="{ path: '/contact' }" class="contact">Contact</a></li> -->
 			<li><a href="http://codepen.io/Gilipe/" class="codepen" target="_blank">Codepen</a></li>
 			<li><a href="https://github.com/Gilipe" class="github" target="_blank">Github</a></li>
 			<li><a href="https://open.spotify.com/user/iamgilipe" class="spotify" target="_blank"><i class="fa fa-music" aria-hidden="true"></i></a></li>
@@ -40,17 +56,41 @@
 	</footer>
 </div>
 
-<template id="home">
-	<div class="home">
-		<h1>Home</h1>
+<template id="about">
+	<div class="about">
+		<h2>About</h2>
 		<div class="content">
+			<p>Coming soon...</p>
 		</div>
 	</div>
 </template>
-<template id="about">
-	<div class="about">
-		<h1>About</h1>
+<template id="contact">
+	<div class="contact">
+		<h2>Contact</h2>
 		<div class="content">
+			<form>
+				<div class="wrap">
+					<label for="name">First &amp; Last</label>
+					<input name="name" type="text" placeholder="First &amp; Last">
+				</div>
+				<div class="wrap">
+					<label for="email">Email</label>
+					<input name="email" type="text" placeholder="Email">
+				</div>
+				<div class="wrap">
+					<label for="tel">Tel</label>
+					<input name="tel" type="phone" placeholder="Tel">
+				</div>
+				<div class="wrap">
+					<label for="subject">Subject</label>
+					<input name="subject" type="text" placeholder="Subject">
+				</div>
+				<div class="wrap">
+					<label for="message">Message</label>
+					<textarea name="message" placeholder="Leave a message …"></textarea>
+				</div>
+				<input type="submit" value="Send Away">
+			</form>
 		</div>
 	</div>
 </template>

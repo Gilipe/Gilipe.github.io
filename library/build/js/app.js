@@ -12,6 +12,12 @@ var AboutComponent = Vue.extend({
 		return { class: "about" }
 	}
 });
+var ContactComponent = Vue.extend({
+	template: "#contact",
+	data: function() {
+		return { class: "contact" }
+	}
+});
 
 var router = new VueRouter();
 
@@ -21,6 +27,9 @@ router.map({
 	},
 	'/about': {
 		component: AboutComponent
+	},
+	'/contact': {
+		component: ContactComponent
 	}
 });
 
