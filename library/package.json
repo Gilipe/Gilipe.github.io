@@ -17,11 +17,13 @@
   },
   "homepage": "https://github.com/Gilipe/gilipe#readme",
   "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.9.0",
     "bourbon": "^4.2.7",
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-vueify": "^1.0.1"
   }
 }

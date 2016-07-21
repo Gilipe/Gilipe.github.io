@@ -30,12 +30,16 @@ module.exports = function(grunt) {
 					'build/js/main.min.js': ['src/js/main.js']
 				}
 			}
-		},
+		},		
 		watch: {
 			css: {
 				files: ['src/**/*.scss'],
 				tasks: ['sass']
 			},
+			// vue: {
+			// 	files: ['src/js/components/**/*.vue'],
+			// 	tasks: ['vueify']
+			// },
 			js: {
 				files: ['src/js/main.js'],
 				tasks: ['uglify']
