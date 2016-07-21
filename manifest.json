@@ -1,6 +1,6 @@
 {
-  "name": "Weather",
-  "short_name": "Weather",
+  "name": "Filipe Figueiredo",
+  "short_name": "Filipe Figueiredo",
   "icons": [{
     "src": "images/icons/icon-128x128.png",
       "sizes": "128x128",
@@ -9,5 +9,5 @@
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "#222"
+  "theme_color": "#fff"
 }
