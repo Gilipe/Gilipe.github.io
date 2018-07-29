@@ -1,105 +1,14 @@
+
 <!doctype html>
 <html class="no-js" lang="">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>In Betweens & Other Things</title>
-	<meta name="description" content="">
+	<title>FF</title>
+	<meta name="description" content="Some kind of web developer.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" sizes="57x57" href="library/build/assetsapple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="library/build/assets/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="library/build/assets/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="library/build/assets/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="library/build/assets/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="library/build/assets/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="library/build/assets/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="library/build/assets/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="library/build/assets/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="library/build/assets/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="library/build/assets/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="library/build/assets/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="library/build/assets/favicon-16x16.png">
-	
-	<link rel="manifest" href="manifest.json">
-	
-	<meta name="msapplication-TileColor" content="#222">
-	<meta name="msapplication-TileImage" content="library/build/assets/ms-icon-144x144.png">
-	<meta name="theme-color" content="#fff">
-
-	<link rel="stylesheet" href="library/build/css/vendor/normalize.min.css">
-	<link rel="stylesheet" href="library/build/css/main.css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-	<script src="library/build/js/vendor/modernizr-2.8.3.min.js"></script>
+	<style>animation: Gradient 0s ease infinite;@keyframes Gradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}</style>
 </head>
 <body>
-<!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]--> 
-
-<div id="app">
-	<div id="particles"></div>
-	<router-view transition="fade" transition-mode="out-in"></router-view>
-	<a v-link="{ path: '/' }" class="logo">
-		<img src="library/build/assets/logo.png" alt="Filipe Figueiredo">
-	</a>
-	<h1>Filipe Figueiredo</h1>
-	<h2>Front-End, Back-End <br><strong><em>&amp;</em></strong> Other Things</h2>
-	<footer class="footer">
-		<ul class="social">
-			<!-- <li><a v-link="{ path: '/about' }" class="about">About</a></li>
-			<li><a v-link="{ path: '/contact' }" class="contact">Contact</a></li> -->
-			<li><a href="http://codepen.io/Gilipe/" class="codepen" target="_blank">Codepen</a></li>
-			<li><a href="https://github.com/Gilipe" class="github" target="_blank">Github</a></li>
-			<li><a href="https://open.spotify.com/user/iamgilipe" class="spotify" target="_blank"><i class="fa fa-music" aria-hidden="true"></i></a></li>
-		</ul>
-	</footer>
-</div>
-
-<template id="about">
-	<div class="section about">
-		<h2>About</h2>
-		<div class="content">
-			<p>Coming soon...</p>
-		</div>
-	</div>
-</template>
-<template id="contact">
-	<div class="section contact">
-		<h2>Contact</h2>
-		<div class="content">
-			<form v-on:submit.prevent="submitForm" action="">
-				<div class="wrap">
-					<label for="name">First <em>&amp;</em> Last</label>
-					<input v-model="name" v-on:blur="isValidName" name="name" type="text" placeholder="First &amp; Last">
-				</div>
-				<div class="wrap">
-					<label for="email">Email</label>
-					<input v-model="email" v-on:blur="isValidEmail" name="email" type="email" placeholder="Email">
-				</div>
-				<div class="wrap">
-					<label for="subject">Subject</label>
-					<input v-model="subject" v-on:blur="isValidSubject" name="subject" type="text" placeholder="Subject">
-				</div>
-				<div class="wrap">
-					<label for="message">Message</label>
-					<textarea v-model="message" v-on:blur="isValidMessage" name="message" placeholder="Message"></textarea>
-				</div>
-				<input type="submit" value="Send Away">
-			</form>
-			<div class="exit">
-				<a v-link="{ path: '/' }" title="exit"><i class="fa fa-times" aria-hidden="true"></i></a>
-			</div>
-		</div>
-	</div>
-</template>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="library/build/js/vendor/particles.min.js"></script>
-<script src="library/build/js/vendor/particles.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.13/vue-router.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.9.3/vue-resource.js"></script>
-<!-- <script src="library/build/js/form.js" data-cfasync="false" ></script> -->
-<script src="library/build/js/app.js"></script>
 </body>
 </html>
